@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int D;
+    int a,b,c,root1,root2;
+    printf("The Quadratic Euation : ax^2+bx+c \n");
+    printf("Enter a b c ..");
+    scanf("%d%d%d",&a,&b,&c);
+    D=b*b-4*a*c;
+    if (D>=0)
+    {
+        if (D==0)
+        {
+            printf("the roots will be same %d",(-b/(2*a)));
+        }
+        else
+        {
+            root1=(-b+pow(D,1/2))/(2*a);
+            root2=(-b-pow(D,1/2))/(2*a);
+            printf("The roots will be different %d%d",root1,root2);
+        }
+    }
+    
+    
+    return 0;
+}
