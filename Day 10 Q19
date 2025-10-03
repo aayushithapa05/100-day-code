@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,c;
+    printf("Enter the side lengths..");
+    scanf("%d%d%d",&a,&b,&c);
+    if (a==c && b==c)
+    {
+        printf("The triangle is equiletral");
+    }
+    else if (a==b || c==b || a==c)
+    {
+        printf("The triangle in isosceles");
+    }
+    else
+    {
+        printf("The triangle is scalene");
+    }
+    return 0;
+}
