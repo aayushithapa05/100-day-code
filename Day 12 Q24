@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+void main() {
+    int unit,amount;
+    printf("Enter number of units consumed..");
+    scanf("%d",&unit);
+    if (unit<=100)
+    {
+        amount=unit*5;
+        printf("The electricity bill is Rs.%d ",amount);
+    }
+    if (unit>=101 && unit<=200)
+    {
+        amount=100*5+(unit-100)*7;
+        printf("The electricity bill is Rs.%d ",amount);
+    }
+    if (unit>=201 && unit<=300)
+    {
+        amount=100*5+100*7+(unit-200)*10;
+        printf("The electricity bill is Rs.%d ",amount);
+    }
+    if (unit>=301)
+    {
+        amount=100*5+100*7+100*10+(unit-300)*12;
+        printf("The electricity bill is Rs.%d ",amount);
+    }
+}
