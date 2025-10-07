@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b,choice;
+    printf("Enter the two numbers..");
+    scanf("%d%d",&a,&b);
+    printf("Operations:\nAddition=1\nSubstration=2\nMultiplication=3\nDivision=4\nModulus=5\n");
+    printf("Enter the number of operation u want to perform..");
+    scanf("%d",&choice);
+    switch (choice)
+    {
+        case 1:
+        printf("The addition of two number is %d",a+b);
+        break;
+        case 2:
+        printf("The substraction of two number is %d",a-b);
+        break;
+        case 3:
+        printf("The multiplication of two number is %d",a*b);
+        break;
+        case 4:
+        printf("The division of two number is %d",a/b);
+        break;
+        case 5:
+        printf("The modulus of two number is %d",a%b);
+        break;
+        default:
+        printf("Enter the choice correctly");
+        break;
+    }
+    return 0;
+}
