@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void main() {
+    int day,fine;
+    printf("Enter number of days..");
+    scanf("%d",&day);
+    if (day<=5)
+    {
+        fine=day*2;
+        printf("The fine of library is Rs.%d ",fine);
+    }
+    if (day>=6 && day<=10)
+    {
+        fine=5*2+(day-5)*4;
+        printf("The fine of library is Rs.%d ",fine);
+    }
+    if (day>=11 && day<=30)
+    {
+        fine=5*2+5*4+(day-10)*6;
+        printf("The fine of library is Rs.%d ",fine);
+    }
+    if (day>=31)
+    {
+        printf("Your membership is cancelled ");
+    }
+}
