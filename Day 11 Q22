@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+
+    float cprice,sprice;
+    float profit,loss;
+    printf("Enter the cost price");
+    scanf("%f",&cprice);
+    printf("Enter the sell price");
+    scanf("%f",&sprice);
+    if (cprice>sprice)
+    {
+        loss=(cprice-sprice)/sprice*100.0;
+        printf("The loss percentage is %f",loss);
+    }
+    else if (cprice==sprice)
+    {
+        printf("The cost price and loss price is equal");
+    }
+    else
+    {
+        profit=(sprice-cprice)/cprice*100.0;
+        printf("The profit percentage is %6.2f",profit);
+    }
+
+    return 0;
+}
