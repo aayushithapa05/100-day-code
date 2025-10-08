@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() 
+{
+    int n,positive=0,zero=0,negative=0;
+    printf("Enter the numbers of elements..");
+    scanf("%d",&n);
+    int array[n];
+    printf("Enter the Elements..");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&array[i]);
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(array[i]>0)
+        {
+            positive++;
+        }
+        else if(array[i]==0)
+        {
+            zero++;
+        }
+        else
+        {
+            negative++;
+        }
+    }
+    printf("The number of positive number in the given array is %d\n",positive);
+    printf("The number of negative number in the given array is %d\n",negative);
+    printf("The number of zero number in the given array is %d",zero);
+    return 0;
+}
