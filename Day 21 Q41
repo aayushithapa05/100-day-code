@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int count(int num)
+{
+    int count=0;
+    while (num>0)
+    {
+        count++;
+        num=num/10;
+    }
+    return count;
+}
+int main() 
+{
+    int c,n,new=0,l,f,d;
+    printf("Enter the number..");
+    scanf("%d",&n);
+    c=count(n);
+    l=n%10;
+    n=n/10;
+    for (int i=0;i<(c-2);i++)
+    {
+        d=n%10;
+        new=new*10+d;
+        n=n/10;
+    }
+    f=n;
+    if (l==0)
+    {
+        printf("The swap is %d",0);
+        n=l;
+        while (new>0)
+        {
+            d=new%10;
+            n=n*10+d;
+            new=new/10;
+        }
+        n=n*10+f;
+        printf("%d",n);
+    }
+    else
+    {
+        n=l;
+        while (new>0)
+        {
+            d=new%10;
+            n=n*10+d;
+            new=new/10;
+        }
+        n=n*10+f;
+        printf("The swap is %d",n);
+    }
+    return 0;
+}
