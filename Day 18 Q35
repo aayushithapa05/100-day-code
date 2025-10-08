@@ -2,7 +2,7 @@
 
 int main()
 {
-    int num,ans;
+    int num;
     printf("Enter the value of n..");
     scanf("%d",&num);
     printf("The factors of the number is ..");
