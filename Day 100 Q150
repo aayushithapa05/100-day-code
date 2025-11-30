@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+struct Employee {
+    int id;
+    char name[50];
+    float salary;
+};
+
+int main() {
+    struct Employee emp;          // normal structure variable
+    struct Employee *ptr = &emp;  // pointer to structure
+
+    // Modify values using pointer and -> operator
+    printf("Enter Employee ID: ");
+    scanf("%d", &ptr->id);
+
+    printf("Enter Employee Name: ");
+    scanf("%s", ptr->name);
+
+    printf("Enter Employee Salary: ");
+    scanf("%f", &ptr->salary);
+
+    // Display values using pointer
+    printf("\n---- Employee Details ----\n");
+    printf("ID      : %d\n", ptr->id);
+    printf("Name    : %s\n", ptr->name);
+    printf("Salary  : %.2f\n", ptr->salary);
+
+    return 0;
+}
