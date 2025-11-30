@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    char source[100],dest[100];
+    FILE *fs,*fd;
+    char ch;
+
+    printf("Enter source file name: ");
+    scanf("%s",source);
+
+    printf("Enter destination file name: ");
+    scanf("%s",dest);
+
+    fs=fopen(source,"r");
+    if(fs==NULL){
+        printf("Source file not found");
+        return 0;
+    }
+
+    fd=fopen(dest,"w");
+
+    while((ch=fgetc(fs))!=EOF){
+        fputc(ch,fd);
+    }
+
+    fclose(fs);
+    fclose(fd);
+
+    printf("File copied successfully");
+
+    return 0;
+}
