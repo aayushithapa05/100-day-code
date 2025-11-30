@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+enum Month {
+    JANUARY = 1,
+    FEBRUARY,
+    MARCH,
+    APRIL,
+    MAY,
+    JUNE,
+    JULY,
+    AUGUST,
+    SEPTEMBER,
+    OCTOBER,
+    NOVEMBER,
+    DECEMBER
+};
+
+int main() {
+    enum Month m;
+
+    for (m = JANUARY; m <= DECEMBER; m++) {
+        printf("%d - ", m);
+
+        switch (m) {
+            case JANUARY:
+                printf("January has 31 days\n");
+                break;
+            case FEBRUARY:
+                printf("February has 28 or 29 days\n");
+                break;
+            case MARCH:
+                printf("March has 31 days\n");
+
