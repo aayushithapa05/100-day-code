@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    FILE *inFile = fopen("input.txt", "r");
+    FILE *outFile = fopen("output.txt", "w");
+
+    if (inFile == NULL || outFile == NULL) {
+        printf("Error opening files.");
+        return 1;
+    }
+
+    int ch;
+    while ((ch = fgetc(inFile)) != EOF) {
+        if (islower(ch))
+            ch = toupper(ch);
+        fputc(ch, outFile);
+    }
+
+    printf("Text converted to uppercase and saved to output.txt");
+
+    fclose(inFile);
+    fclose(outFile);
+
+    return 0;
+}
