@@ -6,37 +6,29 @@ struct Student {
     float marks;
 };
 
+// Function that accepts a structure and prints its members
+void printStudent(struct Student s) {
+    printf("\n--- Student Details ---\n");
+    printf("Name      : %s\n", s.name);
+    printf("Roll No   : %d\n", s.roll_no);
+    printf("Marks     : %.2f\n", s.marks);
+}
+
 int main() {
-    struct Student s[5];
-    int i, topIndex = 0;
+    struct Student st;
 
-    // Input details of 5 students
-    printf("Enter details of 5 students:\n");
-    for (i = 0; i < 5; i++) {
-        printf("\nStudent %d:\n", i + 1);
+    // Input values
+    printf("Enter name: ");
+    scanf("%s", st.name);
 
-        printf("Enter name: ");
-        scanf("%s", s[i].name);
+    printf("Enter roll number: ");
+    scanf("%d", &st.roll_no);
 
-        printf("Enter roll number: ");
-        scanf("%d", &s[i].roll_no);
+    printf("Enter marks: ");
+    scanf("%f", &st.marks);
 
-        printf("Enter marks: ");
-        scanf("%f", &s[i].marks);
-    }
-
-    // Find student with highest marks
-    for (i = 1; i < 5; i++) {
-        if (s[i].marks > s[topIndex].marks) {
-            topIndex = i;
-        }
-    }
-
-    // Print the topper's details
-    printf("\n\n--- Top Student ---\n");
-    printf("Name      : %s\n", s[topIndex].name);
-    printf("Roll No   : %d\n", s[topIndex].roll_no);
-    printf("Marks     : %.2f\n", s[topIndex].marks);
+    // Pass structure to function
+    printStudent(st);
 
     return 0;
 }
