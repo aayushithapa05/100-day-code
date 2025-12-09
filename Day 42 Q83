@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    char s[200];
+    scanf("%[^\n]", s);
+
+    int v=0, c=0, i=0;
+    while(s[i] != '\0') {
+        char ch = s[i];
+        if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z')) {
+            char x = ch | 32;
+            if(x=='a' || x=='e' || x=='i' || x=='o' || x=='u') v++;
+            else c++;
+        }
+        i++;
+    }
+
+    printf("Vowels = %d\nConsonants = %d", v, c);
+}
