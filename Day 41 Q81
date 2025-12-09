@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    char s[100];
+    scanf("%[^\n]", s);
+
+    int count = 0;
+    while (s[count] != '\0')
+        count++;
+
+    printf("%d", count);
+    return 0;
+}
