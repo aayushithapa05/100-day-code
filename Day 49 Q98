@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[200], last[100], word[100];
+    int i = 0, j = 0, k = 0;
+
+    fgets(str, 200, stdin);
+
+    while (str[i] != '\0') {
+        if (str[i] != ' ' && str[i] != '\n') {
+            word[j++] = str[i];
+        } else {
+            word[j] = '\0';
+            strcpy(last, word);
+            j = 0;
+        }
+        i++;
+    }
+
+    i = 0;
+    j = 0;
+
+    while (str[i] != '\0') {
+        if (str[i] != ' ' && str[i] != '\n') {
+            word[j++] = str[i];
+        } else {
+            word[j] = '\0';
+            if (strcmp(word, last) != 0)
+                printf("%c.", word[0]);
+            j = 0;
+        }
+        i++;
+    }
+
+    printf("%s", last);
+    return 0;
+}
