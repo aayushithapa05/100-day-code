@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    char date[20];
+    int d, y;
+
+    scanf("%d/04/%d", &d, &y);
+
+    printf("%02d-Apr-%04d", d, y);
+    return 0;
+}
